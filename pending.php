@@ -19,7 +19,7 @@
                             <img src="assets/img/banner.png" class="img-fluid" alt="benner ...">
                         </div>
                         <div class="col-md-12">
-                            <h3><i class="fas fa-exclamation-circle"></i> Pending for Review</h3>
+                            <h3 class="text-warning"><i class="fas fa-exclamation-circle"></i> Pending for Review</h3>
                             <p style="font-size: 18px;">Thank you for submitting the URL report. We acknowledge that the document you have provided is intended for review. Our team will carefully assess the content and information available at the specified URL to ensure its relevance and accuracy for the intended purpose.
                             <br><br>
                             We understand the importance of thorough evaluation, and we will take the necessary steps to verify the credibility of the source and the data presented. If required, we may seek additional resources or expert opinions to enhance the review process.

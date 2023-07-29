@@ -21,7 +21,7 @@
                             <img src="assets/img/banner.png" class="img-fluid" alt="benner ...">
                         </div>
                         <div class="col-md-12">
-                            <h3><i class="fas fa-exclamation-circle"></i> Report Form</h3>
+                            <h3 class="text-primary"><i class="fas fa-exclamation-circle"></i> Report Form</h3>
                             <form action="createReport" enctype="multipart/form-data" method="post" onsubmit="btnLoader(this.createReport)">
                                 <div class="form-group">
                                     <label for="">URL</label>
