@@ -3,6 +3,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title><?= @$title ? $title : "no_header"; ?></title>
 
+  <link rel="shortcut icon" href="assets/img/logo.png" />
   <!-- Google Font: Source Sans Pro -->
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
   <!-- Font Awesome -->
@@ -27,4 +28,7 @@
   <link rel="stylesheet" href="plugins/summernote/summernote-bs4.min.css">
   <!-- Toastr -->
   <link rel="stylesheet" href="plugins/toastr/toastr.min.css">
+
+  <!-- custom -->
+  <link rel="stylesheet" href="dist/css/main.css">
 </head>

@@ -20,7 +20,7 @@
 <!DOCTYPE html>
 <html lang="en">
 
-  <?php include 'head.php'; ?>
+  <?php include '_head.php'; ?>
 
 <body class="hold-transition login-page" style="background-color: #17a2b845;">
 
@@ -29,13 +29,14 @@
     <!-- /.login-logo -->
     <div class="card card-outline card-primary">
       <div class="card-header text-center">
-        <h3 class="text-uppercase"><?= $my_project_name; ?></h3>
+        <img class="login-icon" src="assets/img/logo.png" alt="logo ...">
+        <h3 class="text-uppercase mt-2"> <?= $my_project_name ?></h3>
       </div>
       <div class="card-body">
 
         <form method="post" enctype="multipart/form-data" action="config/login_conf" onsubmit="validate_login(this)">
           <div class="input-group mb-3">
-            <input type="email" name="sms_username" id="pUsername" class="form-control" placeholder="Email" value="<?= $email; ?>" autofocus required>
+            <input type="email" name="pUsername" class="form-control" placeholder="Email" value="<?= $email; ?>" autofocus required>
             <div class="input-group-append">
               <div class="input-group-text">
                 <span class="fas fa-envelope"></span>
@@ -65,8 +66,8 @@
     </div>
   </div>
 
-  <?php include 'scripts.php'; ?>
-  <?php include 'alerts.php'; ?>
+  <?php include '_scripts.php'; ?>
+  <?php include '_alerts.php'; ?>
 
 </body>
 </html>

@@ -45,10 +45,25 @@
       $(this).find('[autofocus]').select();
     });
 
-	function validate_login(formObj){
-		formObj.login.disabled = true;
-		formObj.login.innerHTML = "signing in ...";
-        return true;  
-	}
+    function btnLoader(formObj){
+
+      formObj.disabled = true;
+      formObj.innerHTML = "processing ...";
+      return true;  
+
+    }
+
+    function passwordValidation(){
+      var new_p = document.getElementById('newPassword').value;
+      var confirm_new_p = document.getElementById('newPassword2').value;
+
+      if (new_p == confirm_new_p) {
+        document.getElementById('profileUpdate').disabled = false;
+        document.getElementById('warnings').innerHTML = "";
+      }else{
+        document.getElementById('profileUpdate').disabled = true;
+        document.getElementById('warnings').innerHTML = "<br>*password do not match";
+      }
+    }
 
 </script>

@@ -4,10 +4,10 @@
     <!-- Sidebar user panel (optional) -->
     <div class="user-panel mt-3 pb-3 mb-3 d-flex">
       <div class="image">
-        <img src="../../assets/img/avatar5.png" class="img-circle elevation-2" alt="User Image">
+        <img src="../../assets/img/avatar3.png" class="img-circle elevation-2" alt="User Image">
       </div>
       <div class="info">
-        <a href="profile" class="d-block"><?= $user_identity; ?> <i class="fa fa-check-circle"></i></a>
+        <a href="profile" class="d-block"><?= $userFullname; ?> <i class="fa fa-check-circle"></i></a>
       </div>
     </div>
 
@@ -19,25 +19,22 @@
             <i class="nav-icon fas fa-th"></i>
             <p>
               Dashboard
-              <span class="right badge badge-warning"><?= count_idnum_requests(); ?></span>
             </p>
           </a>
         </li>
         <li class="nav-item">
-          <a href="requests" class="nav-link">
+          <a href="pdatabase" class="nav-link">
+            <i class="nav-icon fas fa-database"></i>
+            <p>
+              Phishing Database
+            </p>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a href="reports" class="nav-link">
             <i class="nav-icon fas fa-copy"></i>
             <p>
-              Requests
-              <span class="badge badge-info right"><?= count_all_pending_requests(); ?></span>
-            </p>
-          </a>
-        </li>
-        <li class="nav-item">
-          <a href="pickup" class="nav-link">
-            <i class="nav-icon fas fa-hand-holding"></i>
-            <p>
-              For Pick-Up
-              <span class="badge badge-success right"><?= count_pickup_requests(); ?></span>
+              Reports
             </p>
           </a>
         </li>
@@ -46,14 +43,6 @@
             <i class="nav-icon fas fa-user"></i>
             <p>
               System Users
-            </p>
-          </a>
-        </li>
-        <li class="nav-item">
-          <a href="documents" class="nav-link">
-            <i class="nav-icon fa fa-file-alt"></i>
-            <p>
-              Document List
             </p>
           </a>
         </li>

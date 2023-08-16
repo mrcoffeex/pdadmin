@@ -2,7 +2,8 @@
   require_once '../../config/includes.php';
   require_once '_session.php';
 
-  include 'users.paginate.php';
+  $searchText = clean_string($_GET['searchText']);
+  include 'usersSearch.paginate.php';
 
   $title = "Users";
 ?>
@@ -24,7 +25,7 @@
       <div class="container-fluid">
         <div class="row mb-2">
           <div class="col-sm-6">
-            <h1 class="m-0"><i class="nav-icon fas fa-user"></i> <?= $title ?></h1>
+            <h1 class="m-0"><i class="nav-icon fas fa-user"></i> System Users search: <?= $searchText ?></h1>
           </div>
         </div>
       </div>
@@ -37,14 +38,14 @@
             <section class="content">
               <div class="card card-primary">
                 <div class="card-header">
-                  <h3 class="card-title"><span class="badge badge-warning"><?= countUsers("") ?></span> Current Users</h3>
+                  <h3 class="card-title"><span class="badge badge-warning"><?= countUsers($searchText) ?></span> Current Users</h3>
                 </div>
                 <div class="card-body">
                   <div class="row">
                     <div class="col-md-10">
                         <form method="post" enctype="multipart/form-data" action="_redirect">
                         <div class="form-group">
-                          <input type="text" name="userSearch" class="form-control" placeholder="search name here ..." autofocus required>
+                          <input type="text" name="userSearch" class="form-control" placeholder="search name here ..." value="<?= $searchText ?>" autofocus required>
                         </div>
                         </form>
                     </div>
@@ -103,7 +104,7 @@
                                       <div class="col-md-12">
                                         <div class="form-group">
                                           <label>Email <code>*username</code></label>
-                                          <input type="email" name="myemail" class="form-control" value="<?= $user['user_username'] ?>" required>
+                                          <input type="email" name="myemail" class="form-control" value="<?= $user['user_username'] ?>"  required>
                                         </div>
                                       </div>
                                       <div class="col-md-12">

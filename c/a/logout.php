@@ -1,20 +1,8 @@
 <?php 
-
 	require_once '../../config/includes.php';
-	require_once 'session.php';
+	require_once '_session.php';
 
-	$activity_name = words("Logout by ".$user_identity);
-    $activity_date = words(date("Y-m-d H:i:s"));
-
-    $insert_activity_log=$link->query("INSERT Into `um_notification`(
-    											`um_notif_type`,
-    											`um_notif_text`, 
-    											`um_notif_date`) 
-    											values(
-    											'inout',
-    											'$activity_name',
-    											'$activity_date')");
-
+	createLog("Logout", $userEmail, "auth");
 	session_destroy();
 ?>
 

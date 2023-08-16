@@ -49,14 +49,11 @@
 
 			if($count > 0){
 				if ($row['user_status'] == 0) {
-
-					//reset unlock account
-					unlockUser($row['user_uid']);
 					
 					if($row['user_type'] == 0){
 		
 						createLog("Login", $username, "auth");
-						header("location: ../accounts/dev_ops/");
+						header("location: ../c/a/");
 		
 					}else{
 						createLog("Login Attempt", $username, "attempt");
