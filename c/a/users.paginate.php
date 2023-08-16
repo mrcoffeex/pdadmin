@@ -7,11 +7,14 @@
                                     users 
                                     Where
                                     user_uid != :user_uid
+                                    AND
+                                    user_uid != :user_uid2
                                     Order By 
                                     user_fullname 
                                     ASC");
     $getPaginate->execute([
-        'user_uid' => 1
+        'user_uid' => 1,
+        'user_uid2' => $userId
     ]);
     $paginates=$getPaginate->fetch(PDO::FETCH_BOTH);
 
@@ -42,11 +45,14 @@
                                     users 
                                     Where
                                     user_uid != :user_uid
+                                    AND
+                                    user_uid != :user_uid2
                                     Order By 
                                     user_fullname 
                                     ASC $limit");
     $paginate->execute([
-        'user_uid' => 1
+        'user_uid' => 1,
+        'user_uid2' => $userId
     ]);
     
     $paginationCtrls = '';

@@ -6,7 +6,9 @@
                                     From 
                                     users 
                                     Where
-                                    user_uid != :user_uid 
+                                    user_uid != :user_uid
+                                    AND
+                                    user_uid != :user_uid2
                                     AND
                                     CONCAT
                                     (
@@ -19,6 +21,7 @@
                                     ASC");
     $getPaginate->execute([
         'user_uid' => 1,
+        'user_uid2' => $userId,
         'searchText' => "%$searchText%"
     ]);
     $paginates=$getPaginate->fetch(PDO::FETCH_BOTH);
@@ -51,6 +54,8 @@
                                     Where
                                     user_uid != :user_uid
                                     AND
+                                    user_uid != :user_uid2
+                                    AND
                                     CONCAT
                                     (
                                         user_username,
@@ -62,6 +67,7 @@
                                     ASC $limit");
     $paginate->execute([
         'user_uid' => 1,
+        'user_uid2' => $userId,
         'searchText' => "%$searchText%"
     ]);
     
